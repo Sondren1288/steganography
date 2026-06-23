@@ -42,20 +42,20 @@ And we can do the same with the letter `k`, by remembering its representation in
 Following the same approach as above, this becomes `255, 255, 254, 255, 254, 255, 255`.
 
 In total, the first 14 pixels of a purely white image will have the following values (technically, the numbers are padded, so the binary becomes 8 long, but we ignore that for now):
-(255, 255, 255)
-(254, 255, 255)
-(254, 255, 255)
-(255, 255, 255)
-(255, 255, 255)
-(255, 255, 255)
-(255, 255, 255)
-(255, 255, 255)
-(255, 255, 255)
-(254, 255, 255)
-(255, 255, 255)
-(254, 255, 255)
-(255, 255, 255)
-(255, 255, 255)
+(255, 255, 255)  
+(254, 255, 255)  
+(254, 255, 255)  
+(255, 255, 255)  
+(255, 255, 255)  
+(255, 255, 255)  
+(255, 255, 255)  
+(255, 255, 255)  
+(255, 255, 255)  
+(254, 255, 255)  
+(255, 255, 255)  
+(254, 255, 255)  
+(255, 255, 255)  
+(255, 255, 255)  
 
 And remember, this is only the red color-value on each pixel.
 That is, we are changing a pixel from `(255, 255, 255)` to (potentially) `(254, 255, 255)`.
@@ -67,22 +67,22 @@ When there are any form of gradient or "noise" in the image?
 Well, this is partly why I mentioned padding earlier, because we need to ensure that each character is equally many pixels long.
 `O` then goes from `1001111` to `01001111`, and `k` goes to `01101011`.
 So the list of the first 16 pixels becomes:
-(254, 255, 255)
-(255, 255, 255)
-(254, 255, 255)
-(254, 255, 255)
-(255, 255, 255)
-(255, 255, 255)
-(255, 255, 255)
-(255, 255, 255) 
-(254, 255, 255)
-(255, 255, 255)
-(255, 255, 255)
-(254, 255, 255)
-(255, 255, 255)
-(254, 255, 255)
-(255, 255, 255)
-(255, 255, 255)
+(254, 255, 255)  
+(255, 255, 255)  
+(254, 255, 255)  
+(254, 255, 255)  
+(255, 255, 255)  
+(255, 255, 255)  
+(255, 255, 255)  
+(255, 255, 255)   
+(254, 255, 255)  
+(255, 255, 255)  
+(255, 255, 255)  
+(254, 255, 255)  
+(255, 255, 255)  
+(254, 255, 255)  
+(255, 255, 255)  
+(255, 255, 255)  
 
 To read the message back, simply go through the list downwards, and look at the value for red.
 Is it even?
